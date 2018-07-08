@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vm="clr-namespace:AvaloniaUIPlayground.ViewModels;assembly=AvaloniaUIPlayground" Icon="resm:AvaloniaUIPlayground.Assets.avalonia-logo.ico" Title="AvaloniaUIPlayground" Width="800" Height="800">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <StackPanel>
+
+    <TextBlock Text="{Binding TextBoxText}" />
+
+    <TextBlock Text="{Binding #textBox1.Text}" />
+
+    <TextBox Text="{Binding TextBoxText}" Name="textBox1" />
+    <Button Command="{Binding MyCommand}">Click</Button>
+  </StackPanel>
+</Window>
